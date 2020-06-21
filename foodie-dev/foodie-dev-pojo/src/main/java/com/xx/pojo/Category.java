@@ -1,6 +1,7 @@
 package com.xx.pojo;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Id;
 
 public class Category {
     /**
