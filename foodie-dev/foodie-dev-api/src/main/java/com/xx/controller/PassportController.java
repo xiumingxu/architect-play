@@ -5,7 +5,9 @@ import com.fasterxml.jackson.annotation.JsonAlias;
 import com.xx.pojo.Users;
 import com.xx.pojo.bo.UserBO;
 import com.xx.service.UserService;
+import com.xx.utils.CookieUtils;
 import com.xx.utils.JSONResult;
+import com.xx.utils.JsonUtils;
 import com.xx.utils.MD5Utils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -17,6 +19,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.net.ssl.HttpsURLConnection;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 @Api(value="register and login", tags={"used for login and register"})
 @RestController
 @RequestMapping("passport")
@@ -58,18 +63,33 @@ public class PassportController {
         return JSONResult.ok();
     }
 
+    private Users setNullProperty(Users userResult) {
+        userResult.setPassword(null);
+        userResult.setMobile(null);
+        userResult.setEmail(null);
+        userResult.setCreatedTime(null);
+        userResult.setUpdatedTime(null);
+        userResult.setBirthday(null);
+        return userResult;
+    }
+
     @ApiOperation(value = "Userlogin", notes = "User login", httpMethod = "POST")
     @PostMapping("/login")
-    public JSONResult login(@RequestBody UserBO userBO) throws Exception {
+    public JSONResult login(@RequestBody UserBO userBO,
+                            HttpServletRequest request,
+                            HttpServletResponse response) throws Exception {
         String userName = userBO.getUsername();
         String password = userBO.getPassword();
-        if(StringUtils.isBlank(userName) || StringUtils.isBlank(password)
-                )
-            return JSONResult.errorMsg("Username or password cannot be null");
-        Users result = userService.queryUserForLogin(userName, MD5Utils.getMD5Str(password));
 
+        if(StringUtils.isBlank(userName) || StringUtils.isBlank(password))
+            return JSONResult.errorMsg("Username or password cannot be null");
+
+        Users result = userService.queryUserForLogin(userName, MD5Utils.getMD5Str(password));
         if(result == null)
-            return JSONResult.errorMsg("User did not exist already exist");
+            return JSONResult.errorMsg("User or password is not correct");
+        result =  setNullProperty(result);
+
+        CookieUtils.setCookie(request, response, "user", JsonUtils.objectToJson(result), true);
 
         return JSONResult.ok(result);
     }
