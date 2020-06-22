@@ -45,3 +45,7 @@
 0:0:0:0:0:0:0:1 - - [22/Jun/2020:08:49:50 -0700] "GET /foodie-ui/foodie-shop/basic/images/ibar_sprites.png HTTP/1.1" 200 5204
 0:0:0:0:0:0:0:1 - - [22/Jun/2020:08:49:50 -0700] "GET /foodie-ui/foodie-shop/AmazeUI-2.4.2/assets/fonts/fontawesome-webfont.woff2?v=4.5.0 HTTP/1.1" 200 66624
 0:0:0:0:0:0:0:1 - - [22/Jun/2020:08:49:50 -0700] "GET /foodie-ui/foodie-shop/img/foodie.ico HTTP/1.1" 200 4286
+0:0:0:0:0:0:0:1 - - [22/Jun/2020:10:29:17 -0700] "GET / HTTP/1.1" 200 11415
+0:0:0:0:0:0:0:1 - - [22/Jun/2020:10:29:22 -0700] "GET /foodie-ui/foodie-shop HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [22/Jun/2020:10:29:22 -0700] "GET /foodie-ui/foodie-shop/js/app.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [22/Jun/2020:10:29:55 -0700] "GET /foodie-ui/foodie-shop/ HTTP/1.1" 304 -
