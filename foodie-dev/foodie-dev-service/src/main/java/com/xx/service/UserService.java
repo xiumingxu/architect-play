@@ -12,5 +12,9 @@ public interface UserService {
      * Add a user
      */
     public Users createUser(UserBO user);
+    /**
+     * validate user: query
+     */
+    public Users queryUserForLogin(String username, String password);
 
 }
