@@ -59,20 +59,11 @@
 	<div class="footer ">
 		<div class="footer-hd ">
 			<p>
-				<a href="https://www.imooc.com/" target="_blank">慕课网</a>
-				<b>|</b>
-				<a href="https://coding.imooc.com/class/217.html" target="_blank">分布式架构仿抖音短视频</a>
-				<b>|</b>
-				<a href="https://coding.imooc.com/class/261.html" target="_blank">Netty仿微信聊天</a>
-				<b>|</b>
-				<a href="https://coding.imooc.com/class/201.html" target="_blank">Zookeeper与dubbo入门</a>
-				<b>|</b>
-				<a href="https://coding.imooc.com/class/293.html" target="_blank">支付宝小程序</a>
 			</p>
 		</div>
 		<div class="footer-bd ">
 			<p>
-				<em>© 2019 imooc.com 京ICP备12003892号-11 北京奥鹏文化传媒有限公司 版权所有</em>
+				<em>© 2012 @xx </em>
 			</p>
 		</div>
 	</div>
@@ -102,13 +93,13 @@
 				doLogin() {
 
 					if (this.username == null || this.username == undefined || this.username == '') {
-						alert("用户名不能为空");
+						alert("Username cannot be null");
 						return;
 					} else if (this.password == null || this.password == undefined || this.password == '') {
-						alert("密码不能为空");
+						alert("Password cannot be null");
 						return;
 					} else if (this.password.length < 6) {
-						alert("密码不能少于6位");
+						alert("Password cannot be fewer than 6");
 						return;
 					}
 
@@ -131,6 +122,7 @@
 								// console.log(user);
 
 								// window.location.href = app.ctx + "/index.html";
+								// the is for redirect 
 								if (returnUrl != null && returnUrl != undefined && returnUrl != '') {
 									window.location.href = returnUrl;
 								} else {

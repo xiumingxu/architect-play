@@ -36,7 +36,7 @@ public class Swagger2 {
                 .contact(new Contact("xx",
                         "https://www.xiumingxu.com",
                         "xiuming.x@outlook.com"))        // 联系人信息
-                .description("专为天天吃货提供的api文档")  // 详细信息
+//                .description("专为天天吃货提供的api文档")  // 详细信息
                 .version("0.0.1")   // 文档版本号
                 .build();
     }
