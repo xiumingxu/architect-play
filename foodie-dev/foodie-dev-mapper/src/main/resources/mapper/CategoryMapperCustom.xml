@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xx.mapper.CategoryMapper">
+  <resultMap id="BaseResultMap" type="com.xx.pojo.Category">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="father_id" jdbcType="INTEGER" property="fatherId" />
+    <result column="logo" jdbcType="VARCHAR" property="logo" />
+    <result column="slogan" jdbcType="VARCHAR" property="slogan" />
+    <result column="cat_image" jdbcType="VARCHAR" property="catImage" />
+    <result column="bg_color" jdbcType="VARCHAR" property="bgColor" />
+  </resultMap>
+  <select id="getSixNewItemsLazy" resultMap="NewItemsVO" parameterMap="Map">
+      SELECT
+      f.id as rootCatId,
+      f.`name` as rootCatName,
+      f.slogan as slogan,
+      i.item_name as itemName,
+      ii.url as itemUrl,
+      ii.created_time as createTime
+      FROM
+      category f
+      LEFT JOIN
+      items i
+      ON
+      f.id = i.root_cat_id
+      LEFT JOIN
+      items_img ii
+      ON
+      i.id = ii.item_id
+      WHERE
+      f.type = 1
+      AND
+      i.root_cat_id = #{paramsMap.rootCatId}
+      AND
+      ii.is_main = 1
+      ORDER BY
+      i.created_time
+      DESC
+      LIMIT 0, 6
+  </select>
+  <resultMap id="NewItemsVO" type="com.xx.pojo.vo.NewItemsVO">
+    <!--
+      WARNING - @mbg.generated
+       f.id as rootCatId,
+      f.`name` as rootCatName,
+      f.slogan as slogan,
+      f.sloganz as catImage,
+      f.bg_color as bgColor,
+      i.id as itemId,
+      i.item_name as itemName,
+      ii.url as itemUrl,
+      ii.created_time as createTime
+    -->
+    <id column="rootCatId"  property="rootCatId" />
+    <result column="rootCatName"  property="rootCatName" />
+    <result column="slogan"  property="slogan" />
+    <result column="catImage"  property="catImage" />
+    <result column="bgColor"  property="bgColor" />
+    <collection property="simpleItemList" ofType="com.xx.pojo.vo.SimpleItemVO">
+      <result column="itemId"  property="itemId" />
+      <result column="itemName"  property="itemName" />
+      <result column="itemUrl"  property="itemUrl" />
+      <result column="createTime"  property="createTime" />
+    </collection>
+  </resultMap>
+</mapper>

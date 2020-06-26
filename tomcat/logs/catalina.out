@@ -177,3 +177,187 @@ NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED -
 22-Jun-2020 09:57:47.065 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/host-manager] has finished in [16] ms
 22-Jun-2020 09:57:47.068 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
 22-Jun-2020 09:57:47.075 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [579] milliseconds
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Jul-2020 21:02:28.616 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.36
+01-Jul-2020 21:02:28.619 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 3 2020 17:07:09 UTC
+01-Jul-2020 21:02:28.619 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.36.0
+01-Jul-2020 21:02:28.619 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+01-Jul-2020 21:02:28.619 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.15.5
+01-Jul-2020 21:02:28.620 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+01-Jul-2020 21:02:28.620 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk-14.jdk/Contents/Home
+01-Jul-2020 21:02:28.620 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           14+36-1461
+01-Jul-2020 21:02:28.620 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+01-Jul-2020 21:02:28.620 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/XiumingXu/Development/ArchitectPlay/tomcat
+01-Jul-2020 21:02:28.620 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/XiumingXu/Development/ArchitectPlay/tomcat
+01-Jul-2020 21:02:28.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Jul-2020 21:02:28.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Jul-2020 21:02:28.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Jul-2020 21:02:28.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/XiumingXu/Development/ArchitectPlay/tomcat/conf/logging.properties
+01-Jul-2020 21:02:28.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Jul-2020 21:02:28.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Jul-2020 21:02:28.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Jul-2020 21:02:28.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Jul-2020 21:02:28.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+01-Jul-2020 21:02:28.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/XiumingXu/Development/ArchitectPlay/tomcat
+01-Jul-2020 21:02:28.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/XiumingXu/Development/ArchitectPlay/tomcat
+01-Jul-2020 21:02:28.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/XiumingXu/Development/ArchitectPlay/tomcat/temp
+01-Jul-2020 21:02:28.685 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/XiumingXu/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+01-Jul-2020 21:02:28.975 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Jul-2020 21:02:29.042 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [652] milliseconds
+01-Jul-2020 21:02:29.076 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Jul-2020 21:02:29.077 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.36]
+01-Jul-2020 21:02:29.084 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/docs]
+01-Jul-2020 21:02:29.314 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/docs] has finished in [230] ms
+01-Jul-2020 21:02:29.315 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/manager]
+01-Jul-2020 21:02:29.351 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/manager] has finished in [37] ms
+01-Jul-2020 21:02:29.352 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/examples]
+01-Jul-2020 21:02:29.596 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/examples] has finished in [244] ms
+01-Jul-2020 21:02:29.596 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/ROOT]
+01-Jul-2020 21:02:29.610 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/ROOT] has finished in [14] ms
+01-Jul-2020 21:02:29.611 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/foodie-ui]
+01-Jul-2020 21:02:29.633 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/foodie-ui] has finished in [21] ms
+01-Jul-2020 21:02:29.633 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/host-manager]
+01-Jul-2020 21:02:29.650 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/host-manager] has finished in [17] ms
+01-Jul-2020 21:02:29.653 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+01-Jul-2020 21:02:29.659 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [616] milliseconds
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Jul-2020 21:31:57.855 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.36
+01-Jul-2020 21:31:57.858 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 3 2020 17:07:09 UTC
+01-Jul-2020 21:31:57.858 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.36.0
+01-Jul-2020 21:31:57.859 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+01-Jul-2020 21:31:57.859 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.15.5
+01-Jul-2020 21:31:57.859 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+01-Jul-2020 21:31:57.859 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk-14.jdk/Contents/Home
+01-Jul-2020 21:31:57.860 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           14+36-1461
+01-Jul-2020 21:31:57.860 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+01-Jul-2020 21:31:57.860 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/XiumingXu/Development/ArchitectPlay/tomcat
+01-Jul-2020 21:31:57.860 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/XiumingXu/Development/ArchitectPlay/tomcat
+01-Jul-2020 21:31:57.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Jul-2020 21:31:57.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Jul-2020 21:31:57.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Jul-2020 21:31:57.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/XiumingXu/Development/ArchitectPlay/tomcat/conf/logging.properties
+01-Jul-2020 21:31:57.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Jul-2020 21:31:57.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Jul-2020 21:31:57.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Jul-2020 21:31:57.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Jul-2020 21:31:57.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+01-Jul-2020 21:31:57.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/XiumingXu/Development/ArchitectPlay/tomcat
+01-Jul-2020 21:31:57.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/XiumingXu/Development/ArchitectPlay/tomcat
+01-Jul-2020 21:31:57.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/XiumingXu/Development/ArchitectPlay/tomcat/temp
+01-Jul-2020 21:31:57.874 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/XiumingXu/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+01-Jul-2020 21:31:58.127 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Jul-2020 21:31:58.154 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector[HTTP/1.1-8080]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1042)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:533)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1057)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:584)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:607)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:303)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:479)
+		at java.base/sun.nio.ch.Net.bind(Net.java:468)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:220)
+		at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:88)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:228)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:211)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1141)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1154)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:581)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:74)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1039)
+		... 13 more
+01-Jul-2020 21:31:58.155 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [468] milliseconds
+01-Jul-2020 21:31:58.187 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Jul-2020 21:31:58.188 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.36]
+01-Jul-2020 21:31:58.194 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/docs]
+01-Jul-2020 21:31:58.397 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/docs] has finished in [202] ms
+01-Jul-2020 21:31:58.397 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/manager]
+01-Jul-2020 21:31:58.428 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/manager] has finished in [30] ms
+01-Jul-2020 21:31:58.428 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/examples]
+01-Jul-2020 21:31:58.667 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/examples] has finished in [239] ms
+01-Jul-2020 21:31:58.668 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/ROOT]
+01-Jul-2020 21:31:58.682 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/ROOT] has finished in [14] ms
+01-Jul-2020 21:31:58.682 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/foodie-ui]
+01-Jul-2020 21:31:58.703 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/foodie-ui] has finished in [21] ms
+01-Jul-2020 21:31:58.704 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/host-manager]
+01-Jul-2020 21:31:58.722 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/host-manager] has finished in [18] ms
+01-Jul-2020 21:31:58.726 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [569] milliseconds
+01-Jul-2020 21:31:58.747 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:479)
+		at java.base/sun.nio.ch.Net.bind(Net.java:468)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:643)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:396)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:282)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:584)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:721)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:667)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+01-Jul-2020 21:31:58.747 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Jul-2020 21:31:58.747 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+01-Jul-2020 21:31:58.767 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+01-Jul-2020 21:31:58.768 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+01-Jul-2020 21:32:07.777 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+01-Jul-2020 21:32:07.778 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+01-Jul-2020 21:32:07.783 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+01-Jul-2020 21:32:07.811 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+01-Jul-2020 21:32:07.814 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Jul-2020 21:32:11.215 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.36
+01-Jul-2020 21:32:11.218 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 3 2020 17:07:09 UTC
+01-Jul-2020 21:32:11.218 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.36.0
+01-Jul-2020 21:32:11.218 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+01-Jul-2020 21:32:11.218 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.15.5
+01-Jul-2020 21:32:11.218 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+01-Jul-2020 21:32:11.218 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk-14.jdk/Contents/Home
+01-Jul-2020 21:32:11.218 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           14+36-1461
+01-Jul-2020 21:32:11.218 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+01-Jul-2020 21:32:11.219 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/XiumingXu/Development/ArchitectPlay/tomcat
+01-Jul-2020 21:32:11.219 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/XiumingXu/Development/ArchitectPlay/tomcat
+01-Jul-2020 21:32:11.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Jul-2020 21:32:11.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Jul-2020 21:32:11.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Jul-2020 21:32:11.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/XiumingXu/Development/ArchitectPlay/tomcat/conf/logging.properties
+01-Jul-2020 21:32:11.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Jul-2020 21:32:11.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Jul-2020 21:32:11.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Jul-2020 21:32:11.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Jul-2020 21:32:11.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+01-Jul-2020 21:32:11.232 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/XiumingXu/Development/ArchitectPlay/tomcat
+01-Jul-2020 21:32:11.232 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/XiumingXu/Development/ArchitectPlay/tomcat
+01-Jul-2020 21:32:11.232 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/XiumingXu/Development/ArchitectPlay/tomcat/temp
+01-Jul-2020 21:32:11.232 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/XiumingXu/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+01-Jul-2020 21:32:11.491 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Jul-2020 21:32:11.535 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [476] milliseconds
+01-Jul-2020 21:32:11.565 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+01-Jul-2020 21:32:11.565 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.36]
+01-Jul-2020 21:32:11.571 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/docs]
+01-Jul-2020 21:32:11.773 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/docs] has finished in [202] ms
+01-Jul-2020 21:32:11.774 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/manager]
+01-Jul-2020 21:32:11.805 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/manager] has finished in [30] ms
+01-Jul-2020 21:32:11.805 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/examples]
+01-Jul-2020 21:32:12.048 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/examples] has finished in [243] ms
+01-Jul-2020 21:32:12.048 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/ROOT]
+01-Jul-2020 21:32:12.065 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/ROOT] has finished in [16] ms
+01-Jul-2020 21:32:12.065 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/foodie-ui]
+01-Jul-2020 21:32:12.086 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/foodie-ui] has finished in [21] ms
+01-Jul-2020 21:32:12.086 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/host-manager]
+01-Jul-2020 21:32:12.106 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/XiumingXu/Development/ArchitectPlay/tomcat/webapps/host-manager] has finished in [19] ms
+01-Jul-2020 21:32:12.109 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+01-Jul-2020 21:32:12.117 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [581] milliseconds
