@@ -5,4 +5,3 @@
 **/target/*
 **/.idea/*
 tomcat/logs/*
-/tomcat/logs/*
