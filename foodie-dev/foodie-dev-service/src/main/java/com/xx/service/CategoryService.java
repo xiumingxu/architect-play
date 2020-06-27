@@ -1,0 +1,1 @@
+package com.xx.service;import com.xx.pojo.Carousel;import com.xx.pojo.Category;import java.util.List;public interface CategoryService {    public List<Category> queryAllRootLevelCategory();}
