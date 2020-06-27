@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 import java.util.Map;
 
-public interface CategoryMapper extends MyMapper<Category> {
+public interface CategoryMapperCustom extends MyMapper<Category> {
 
     public List getSixNewItemsLazy(@Param("paramsMap") Map<String, Object> map);
 }

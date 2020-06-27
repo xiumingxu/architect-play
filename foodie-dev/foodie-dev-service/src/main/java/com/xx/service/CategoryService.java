@@ -1,1 +1,1 @@
-package com.xx.service;import com.xx.pojo.Carousel;import com.xx.pojo.Category;import java.util.List;public interface CategoryService {    public List<Category> queryAllRootLevelCategory();}
+package com.xx.service;import com.xx.pojo.Carousel;import com.xx.pojo.Category;import com.xx.pojo.vo.NewItemsVO;import java.util.List;public interface CategoryService {    public List<Category> queryAllRootLevelCategory();    /**     * search for in front page six new item     */    public List<NewItemsVO> getSixNewItemsLazy(Integer rootCatId);}

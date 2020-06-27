@@ -14,5 +14,4 @@
     <result column="cat_image" jdbcType="VARCHAR" property="catImage" />
     <result column="bg_color" jdbcType="VARCHAR" property="bgColor" />
   </resultMap>
-
 </mapper>

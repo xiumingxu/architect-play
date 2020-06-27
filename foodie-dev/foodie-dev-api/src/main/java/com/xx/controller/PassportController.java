@@ -1,8 +1,6 @@
 package com.xx.controller;
 
 
-import com.fasterxml.jackson.annotation.JsonAlias;
-import com.sun.xml.internal.ws.resources.HttpserverMessages;
 import com.xx.pojo.Users;
 import com.xx.pojo.bo.UserBO;
 import com.xx.service.UserService;
@@ -11,16 +9,12 @@ import com.xx.utils.JSONResult;
 import com.xx.utils.JsonUtils;
 import com.xx.utils.MD5Utils;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
-import org.apache.catalina.filters.ExpiresFilter;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import javax.net.ssl.HttpsURLConnection;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
