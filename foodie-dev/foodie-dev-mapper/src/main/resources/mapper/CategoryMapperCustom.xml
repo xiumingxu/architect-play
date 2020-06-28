@@ -8,7 +8,8 @@
       f.slogan as slogan,
       i.item_name as itemName,
       ii.url as itemUrl,
-      ii.created_time as createTime
+      ii.created_time as createTime,
+      ii.item_id as itemId
       FROM
       category f
       LEFT JOIN
