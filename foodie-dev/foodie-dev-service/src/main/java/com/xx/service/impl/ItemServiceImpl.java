@@ -1,10 +1,9 @@
 package com.xx.service.impl;
 
+import com.xx.enums.CommentLevel;
 import com.xx.mapper.*;
-import com.xx.pojo.Items;
-import com.xx.pojo.ItemsImg;
-import com.xx.pojo.ItemsParam;
-import com.xx.pojo.ItemsSpec;
+import com.xx.pojo.*;
+import com.xx.pojo.vo.CommentLevelCountsVO;
 import com.xx.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,6 +24,8 @@ public class ItemServiceImpl implements ItemService {
     private ItemsSpecMapper itemsSpecMapper;
     @Autowired
     private ItemsParamMapper itemsParamMapper;
+    @Autowired
+    private ItemsCommentsMapper itemsCommentsMapper;
 
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
@@ -59,5 +60,29 @@ public class ItemServiceImpl implements ItemService {
         criteria.andEqualTo("itemId", itemId);
         //??? selectOne vs select
         return itemsParamMapper.selectOneByExample(itemsParamExp);
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public CommentLevelCountsVO queryCommentCounts(String itemId) {
+        Integer goodCounts = getCommentCounts(itemId, CommentLevel.GOOD.type);
+        Integer normalCounts = getCommentCounts(itemId, CommentLevel.NORMAL.type);
+        Integer badCounts = getCommentCounts(itemId, CommentLevel.BAD.type);
+        Integer totalCounts = goodCounts + badCounts + normalCounts;
+        CommentLevelCountsVO countsVO =  new CommentLevelCountsVO();
+        countsVO.setGoodCounts(goodCounts);
+        countsVO.setBadCounts(badCounts);
+        countsVO.setNormalCounts(normalCounts);
+        countsVO.setTotalCounts(totalCounts);
+        return countsVO;
+    }
+
+    Integer getCommentCounts(String itemId, Integer level){
+        ItemsComments condition = new ItemsComments();
+        condition.setItemId(itemId);
+        if(level != null){
+            condition.setCommentLevel(level);
+        }
+        return itemsCommentsMapper.selectCount(condition);
     }
 }

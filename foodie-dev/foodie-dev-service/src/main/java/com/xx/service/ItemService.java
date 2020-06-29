@@ -4,6 +4,7 @@ import com.xx.pojo.Items;
 import com.xx.pojo.ItemsImg;
 import com.xx.pojo.ItemsParam;
 import com.xx.pojo.ItemsSpec;
+import com.xx.pojo.vo.CommentLevelCountsVO;
 
 import java.util.List;
 
@@ -38,5 +39,10 @@ public interface ItemService {
      * @return
      */
     public ItemsParam queryItemParam(String itemId);
+
+    /**
+     * Search for item comments by item Id
+     */
+    public CommentLevelCountsVO queryCommentCounts(String itemID);
 
 }
