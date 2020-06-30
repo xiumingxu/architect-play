@@ -53,3 +53,7 @@ mapper:
   mappers: com.xx.my.mapper.MyMapper
   not-empty: false
   identity: MYSQL
+
+pagehelper:
+  helperDialect: mysql
+  supportMethodsArguments: true

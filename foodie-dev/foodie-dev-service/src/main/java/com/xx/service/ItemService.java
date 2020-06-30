@@ -5,6 +5,7 @@ import com.xx.pojo.ItemsImg;
 import com.xx.pojo.ItemsParam;
 import com.xx.pojo.ItemsSpec;
 import com.xx.pojo.vo.CommentLevelCountsVO;
+import com.xx.pojo.vo.ItemCommentVO;
 
 import java.util.List;
 
@@ -44,5 +45,10 @@ public interface ItemService {
      * Search for item comments by item Id
      */
     public CommentLevelCountsVO queryCommentCounts(String itemID);
+
+    /**
+     * Get item comments
+     */
+    public List<ItemCommentVO> queryPagedComments(String itemId, Integer level);
 
 }
