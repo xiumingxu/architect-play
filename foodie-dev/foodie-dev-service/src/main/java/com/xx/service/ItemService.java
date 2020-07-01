@@ -5,7 +5,7 @@ import com.xx.pojo.ItemsImg;
 import com.xx.pojo.ItemsParam;
 import com.xx.pojo.ItemsSpec;
 import com.xx.pojo.vo.CommentLevelCountsVO;
-import com.xx.pojo.vo.ItemCommentVO;
+import com.xx.utils.PagedGridResult;
 
 import java.util.List;
 
@@ -48,7 +48,8 @@ public interface ItemService {
 
     /**
      * Get item comments
+     * @return
      */
-    public List<ItemCommentVO> queryPagedComments(String itemId, Integer level);
+    public PagedGridResult queryPagedComments(String itemId, Integer level, Integer page, Integer pageSize);
 
 }

@@ -9,6 +9,7 @@ import com.xx.pojo.vo.CommentLevelCountsVO;
 import com.xx.pojo.vo.ItemInfoVO;
 import com.xx.service.ItemService;
 import com.xx.utils.JSONResult;
+import com.xx.utils.PagedGridResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -21,7 +22,7 @@ import java.util.List;
 @Api(value="item details page", tags={"item details page"})
 @RestController
 @RequestMapping("items")
-public class ItemsController {
+public class ItemsController extends BaseController {
 
     @Autowired
     private ItemService itemService;
@@ -48,6 +49,31 @@ public class ItemsController {
     }
 
     @ApiOperation(value="Search for item comment counts", httpMethod="GET")
+    @GetMapping("/comments")
+    public JSONResult getItemCommentsCounts(
+            @ApiParam(name="itemId", required = true)
+            @RequestParam String itemId,
+            @ApiParam(name="level", required = false)
+            @RequestParam Integer level,
+            @ApiParam(name="page", required = false, value = "current page")
+            @RequestParam Integer page,
+            @ApiParam(name="pageSize", required = false)
+            @RequestParam Integer pageSize
+            ){
+        //这里就被看了, 不需要
+        if(StringUtils.isBlank(itemId))
+            return JSONResult.errorMsg("Item Id cannot be blank");
+        if(page == null)
+            page = 1;
+        // 可以找个通用化参数的 controller
+        if(pageSize == null)
+            pageSize = COMMENT_PAGE_SIZE;
+        PagedGridResult pagedComments = itemService.queryPagedComments(itemId, level, page, pageSize);
+
+        return JSONResult.ok(pagedComments);
+    }
+
+    @ApiOperation(value="Search for item comments", httpMethod="GET")
     @GetMapping("/commentLevel")
     public JSONResult getItemCommentsCounts(
             @ApiParam(name="itemId", required = true)

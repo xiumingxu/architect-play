@@ -3,7 +3,8 @@
 <mapper namespace="com.xx.mapper.ItemsMapperCustom">
 <!--  map 传的东西可以多, resultMap是 vo-->
 <!--  这里不用管 list-->
-  <select id="queryItemComments" parameterType="Map" resultMap="com.xx.pojo.vo.ItemCommentVO">
+<!--  resultType 而不是 resultMap-->
+  <select id="queryItemComments" parameterType="Map" resultType="com.xx.pojo.vo.ItemCommentVO">
     select
     ic.comment_level as commentLevel,
     ic.content as content,
@@ -16,10 +17,9 @@
     on ic.user_id = u.id
     -- Check how the variable to sql
     where ic.item_id = #{paramsMap.itemId}
-    <if test="paramsMap.level != null and paramsMap.level != ''">
+    <if test="paramsMap.level != null and paramsMap.level != '' ">
       and ic.comment_level = #{paramsMap.level}
     </if>
-
   </select>
 
 </mapper>

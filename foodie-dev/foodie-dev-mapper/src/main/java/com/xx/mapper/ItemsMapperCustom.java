@@ -8,5 +8,5 @@ import java.util.List;
 
 // 被 itemservice 去实现
 public interface ItemsMapperCustom {
-    public List<ItemCommentVO> queryItemComments(@Param("paramsMap") Map<String, Object> map);
+    List<ItemCommentVO> queryItemComments(@Param("paramsMap") Map<String, Object> map);
 }
