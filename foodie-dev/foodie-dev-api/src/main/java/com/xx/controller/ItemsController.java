@@ -1,12 +1,14 @@
 package com.xx.controller;
 
 
+import com.github.pagehelper.IPage;
 import com.xx.pojo.Items;
 import com.xx.pojo.ItemsImg;
 import com.xx.pojo.ItemsParam;
 import com.xx.pojo.ItemsSpec;
 import com.xx.pojo.vo.CommentLevelCountsVO;
 import com.xx.pojo.vo.ItemInfoVO;
+import com.xx.pojo.vo.SearchItemVO;
 import com.xx.service.ItemService;
 import com.xx.utils.JSONResult;
 import com.xx.utils.PagedGridResult;
@@ -83,5 +85,32 @@ public class ItemsController extends BaseController {
         CommentLevelCountsVO countsVO = itemService.queryCommentCounts(itemId);
 
         return JSONResult.ok(countsVO);
+    }
+
+    @ApiOperation(value="Search for items list", httpMethod="GET")
+    @GetMapping("/search")
+    public JSONResult getItemCommentsCounts(
+            @ApiParam(name="keywords", required = true)
+            @RequestParam String keywords,
+            @ApiParam(name="sort", required = false)
+            @RequestParam String sort,
+            @ApiParam(name="page", required = false, value = "current page")
+            @RequestParam Integer page,
+            @ApiParam(name="pageSize", required = false)
+            @RequestParam Integer pageSize
+    ){
+
+        //by default, cannot search
+        if(StringUtils.isBlank(keywords))
+            return JSONResult.errorMsg("Item Id cannot be blank");
+        if(page == null)
+            page = 1;
+        // 可以找个通用化参数的 controller
+        if(pageSize == null)
+            pageSize = COMMENT_PAGE_SIZE;
+
+        PagedGridResult list = itemService.searchItem(keywords, sort, page, pageSize);
+
+        return JSONResult.ok(list);
     }
 }

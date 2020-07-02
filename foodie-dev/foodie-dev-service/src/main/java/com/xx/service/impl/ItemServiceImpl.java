@@ -7,6 +7,7 @@ import com.xx.mapper.*;
 import com.xx.pojo.*;
 import com.xx.pojo.vo.CommentLevelCountsVO;
 import com.xx.pojo.vo.ItemCommentVO;
+import com.xx.pojo.vo.SearchItemVO;
 import com.xx.service.ItemService;
 import com.xx.utils.PagedGridResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -100,6 +101,15 @@ public class ItemServiceImpl implements ItemService {
 //        return list;
     }
 
+    @Override
+    public PagedGridResult searchItem(String keywords, String sort, Integer page, Integer pageSize) {
+        Map<String, Object> map =  new HashMap<>();
+        map.put("keywords", keywords);
+        List<SearchItemVO> list = itemsMapperCustom.searchItems(map);
+        PageHelper.startPage(page, pageSize);
+        return setterPagedGrid(list, page);
+    }
+
     private Integer getCommentCounts(String itemId, Integer level){
         ItemsComments condition = new ItemsComments();
         condition.setItemId(itemId);
@@ -118,4 +128,6 @@ public class ItemServiceImpl implements ItemService {
         grid.setRecords(pagedList.getTotal());
         return grid;
     }
+
+
 }

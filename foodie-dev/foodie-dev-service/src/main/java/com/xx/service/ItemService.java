@@ -52,4 +52,10 @@ public interface ItemService {
      */
     public PagedGridResult queryPagedComments(String itemId, Integer level, Integer page, Integer pageSize);
 
+    /**
+     * Search for item list
+     * @return
+     */
+    public PagedGridResult searchItem(String keywords, String sort, Integer page, Integer pageSize);
+
 }
