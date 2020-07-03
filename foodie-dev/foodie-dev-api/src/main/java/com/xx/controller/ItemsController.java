@@ -1,14 +1,12 @@
 package com.xx.controller;
 
 
-import com.github.pagehelper.IPage;
 import com.xx.pojo.Items;
 import com.xx.pojo.ItemsImg;
 import com.xx.pojo.ItemsParam;
 import com.xx.pojo.ItemsSpec;
 import com.xx.pojo.vo.CommentLevelCountsVO;
 import com.xx.pojo.vo.ItemInfoVO;
-import com.xx.pojo.vo.SearchItemVO;
 import com.xx.service.ItemService;
 import com.xx.utils.JSONResult;
 import com.xx.utils.PagedGridResult;
@@ -107,9 +105,36 @@ public class ItemsController extends BaseController {
             page = 1;
         // 可以找个通用化参数的 controller
         if(pageSize == null)
-            pageSize = COMMENT_PAGE_SIZE;
+            pageSize = SEARCH_ITEM_PAGE_SIZE;
 
-        PagedGridResult list = itemService.searchItem(keywords, sort, page, pageSize);
+        PagedGridResult list = itemService.searchItems(keywords, sort, page, pageSize);
+
+        return JSONResult.ok(list);
+    }
+
+    @ApiOperation(value="Search for items list by category", httpMethod="GET")
+    @GetMapping("/catItems")
+    public JSONResult getItemCommentsCounts(
+            @ApiParam(name="catId", required = true)
+            @RequestParam Integer catId,
+            @ApiParam(name="sort", required = false)
+            @RequestParam String sort,
+            @ApiParam(name="page", required = false, value = "current page")
+            @RequestParam Integer page,
+            @ApiParam(name="pageSize", required = false)
+            @RequestParam Integer pageSize
+    ){
+
+        //by default, cannot search
+        if(catId == null)
+            return JSONResult.errorMsg("Category Id cannot be blank");
+        if(page == null)
+            page = 1;
+        // 可以找个通用化参数的 controller
+        if(pageSize == null)
+            pageSize = SEARCH_ITEM_PAGE_SIZE;
+
+        PagedGridResult list = itemService.searchItemsByThirdCat(catId, sort, page, pageSize);
 
         return JSONResult.ok(list);
     }

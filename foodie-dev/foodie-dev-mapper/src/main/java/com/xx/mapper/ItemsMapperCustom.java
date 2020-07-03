@@ -11,4 +11,5 @@ import java.util.List;
 public interface ItemsMapperCustom {
     List<ItemCommentVO> queryItemComments(@Param("paramsMap") Map<String, Object> map);
     List<SearchItemVO> searchItems(@Param("paramsMap") Map<String, Object> map);
+    List<SearchItemVO> searchItemsByThirdCat(@Param("paramsMap") Map<String, Object> map);
 }

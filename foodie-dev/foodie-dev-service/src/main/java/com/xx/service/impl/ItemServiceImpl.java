@@ -102,10 +102,19 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    public PagedGridResult searchItem(String keywords, String sort, Integer page, Integer pageSize) {
+    public PagedGridResult searchItems(String keywords, String sort, Integer page, Integer pageSize) {
         Map<String, Object> map =  new HashMap<>();
         map.put("keywords", keywords);
         List<SearchItemVO> list = itemsMapperCustom.searchItems(map);
+        PageHelper.startPage(page, pageSize);
+        return setterPagedGrid(list, page);
+    }
+
+    @Override
+    public PagedGridResult searchItemsByThirdCat(Integer catId, String sort, Integer page, Integer pageSize) {
+        Map<String, Object> map =  new HashMap<>();
+        map.put("catId", catId);
+        List<SearchItemVO> list = itemsMapperCustom.searchItemsByThirdCat(map);
         PageHelper.startPage(page, pageSize);
         return setterPagedGrid(list, page);
     }
