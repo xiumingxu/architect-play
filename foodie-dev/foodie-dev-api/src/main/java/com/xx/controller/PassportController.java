@@ -67,7 +67,7 @@ public class PassportController {
                 JsonUtils.objectToJson(userResult), true);
 
         // TODO 生成用户token，存入redis会话
-        // TODO 同步购物车数据
+        // TODO 同步购物车数据 在登录和注册都是要用
 
         return JSONResult.ok();
     }
@@ -103,6 +103,8 @@ public class PassportController {
         result =  setNullProperty(result);
         // 在服务端设置把所有的东西放到 cookie 里
         CookieUtils.setCookie(request, response, "user", JsonUtils.objectToJson(result), true);
+        // TODO 生成用户token，存入redis会话
+        // TODO 同步购物车数据 在登录和注册都是要用
 
         return JSONResult.ok(result);
     }

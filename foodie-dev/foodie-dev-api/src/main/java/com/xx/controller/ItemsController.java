@@ -7,6 +7,7 @@ import com.xx.pojo.ItemsParam;
 import com.xx.pojo.ItemsSpec;
 import com.xx.pojo.vo.CommentLevelCountsVO;
 import com.xx.pojo.vo.ItemInfoVO;
+import com.xx.pojo.vo.ShopcartVO;
 import com.xx.service.ItemService;
 import com.xx.utils.JSONResult;
 import com.xx.utils.PagedGridResult;
@@ -137,5 +138,17 @@ public class ItemsController extends BaseController {
         PagedGridResult list = itemService.searchItemsByThirdCat(catId, sort, page, pageSize);
 
         return JSONResult.ok(list);
+    }
+
+    @ApiOperation(value="Search for items list by specId, focused on dynamic price", httpMethod="GET")
+    @GetMapping("/refresh")
+    public JSONResult getLastestItemsInfoList(
+            @ApiParam(name="itemSpecIds", required = true, example = "1001,1003,1005")
+            @RequestParam String itemSpecIds){
+        //不一定非要 error message, value为空也可以
+        if(StringUtils.isBlank(itemSpecIds))
+            return JSONResult.ok();
+        List<ShopcartVO> lastestItemsList = itemService.queryItemsBySpecIds(itemSpecIds);
+        return JSONResult.ok(lastestItemsList);
     }
 }

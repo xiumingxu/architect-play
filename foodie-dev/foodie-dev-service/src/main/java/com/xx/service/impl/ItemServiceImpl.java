@@ -8,6 +8,7 @@ import com.xx.pojo.*;
 import com.xx.pojo.vo.CommentLevelCountsVO;
 import com.xx.pojo.vo.ItemCommentVO;
 import com.xx.pojo.vo.SearchItemVO;
+import com.xx.pojo.vo.ShopcartVO;
 import com.xx.service.ItemService;
 import com.xx.utils.PagedGridResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +17,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class ItemServiceImpl implements ItemService {
@@ -86,6 +85,7 @@ public class ItemServiceImpl implements ItemService {
         return countsVO;
     }
 
+    @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public PagedGridResult queryPagedComments(String itemId, Integer level, Integer page, Integer pageSize) {
         Map<String, Object> map =  new HashMap<>();
@@ -101,6 +101,7 @@ public class ItemServiceImpl implements ItemService {
 //        return list;
     }
 
+    @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public PagedGridResult searchItems(String keywords, String sort, Integer page, Integer pageSize) {
         Map<String, Object> map =  new HashMap<>();
@@ -110,6 +111,7 @@ public class ItemServiceImpl implements ItemService {
         return setterPagedGrid(list, page);
     }
 
+    @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public PagedGridResult searchItemsByThirdCat(Integer catId, String sort, Integer page, Integer pageSize) {
         Map<String, Object> map =  new HashMap<>();
@@ -138,5 +140,13 @@ public class ItemServiceImpl implements ItemService {
         return grid;
     }
 
-
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public List<ShopcartVO> queryItemsBySpecIds(String specIds) {
+        String ids[] = specIds.split(",");
+        List<String> specIdsList = new ArrayList<>();
+        //translate array to lisrt
+        Collections.addAll(specIdsList, ids);
+        return itemsMapperCustom.queryItemsBySpecIds(specIdsList);
+    }
 }
