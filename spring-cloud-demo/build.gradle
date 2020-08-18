@@ -1,8 +1,7 @@
 plugins {
     id 'java'
 }
-
-group 'org.example'
+group 'com.xx'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -12,3 +11,4 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
